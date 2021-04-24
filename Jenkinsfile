@@ -3,7 +3,7 @@ pipeline {
  agent {label 'aws'}
 stages{
 
- // this stage clean the environment
+// this stage clean the environment
  stage ('checkout'){
    steps{
 		cleanWs()

@@ -1,5 +1,4 @@
 #!/bin/bash
-:set fileformat=unix
 
 
 url=$1

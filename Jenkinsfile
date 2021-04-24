@@ -34,7 +34,7 @@ stages{
   stage ('archive and upload to S3 '){
    steps{
 				  sh 'sudo apt install zip'
-                  sh "zip node-weight-tracker.zip docs/* src/* tools/* .eslintrc.js LICENSE package-lock.json package.json"
+                  sh "zip node-weight-tracker.zip  -r docs/ src/ tools/ .eslintrc.js LICENSE package-lock.json package.json"
 				  withAWS(region:'us-east-1',credentials:'awsCredentials')\
                   {
 					  s3Upload bucket: "web-app-bucket-gal/node-weight-tracker", workingDir:'', includePathPattern:'node-weight-tracker.zip'

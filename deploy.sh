@@ -8,7 +8,7 @@ secret=$3
 function installtion(){
         #<description>
         # This function install using apt all the  requirements for the App and the DB.
-
+sudo apt-get update
 sudo apt-get install git
 curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -19,7 +19,6 @@ sudo npm install pm2 -g
 sudo npm install cjs
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get update
 sudo apt-get -y install postgresql
 sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'postgres';"
 }

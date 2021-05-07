@@ -29,4 +29,4 @@ This sample application demonstrates the following technologies.
 
 The associated blog post goes into more detail on how to set up PostgreSQL with Docker and how to configure your Okta account.
 
-
+22
